@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{0F214D48-88A4-BA49-CF48-704A45472209}") = "Trippy-Color-", "Assembly-CSharp-firstpass.csproj", "{6E5B8570-555F-7318-1A2A-4EA67430AA71}"
+EndProject
+Project("{0F214D48-88A4-BA49-CF48-704A45472209}") = "Trippy-Color-", "Assembly-CSharp.csproj", "{A097D28E-2D92-2653-13A3-693892A24ABE}"
+EndProject
+Project("{0F214D48-88A4-BA49-CF48-704A45472209}") = "Trippy-Color-", "Assembly-CSharp-Editor.csproj", "{B494D7D9-C06B-BC15-A2FB-D42B7EBF1FF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E5B8570-555F-7318-1A2A-4EA67430AA71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E5B8570-555F-7318-1A2A-4EA67430AA71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E5B8570-555F-7318-1A2A-4EA67430AA71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E5B8570-555F-7318-1A2A-4EA67430AA71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A097D28E-2D92-2653-13A3-693892A24ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A097D28E-2D92-2653-13A3-693892A24ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A097D28E-2D92-2653-13A3-693892A24ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A097D28E-2D92-2653-13A3-693892A24ABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B494D7D9-C06B-BC15-A2FB-D42B7EBF1FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B494D7D9-C06B-BC15-A2FB-D42B7EBF1FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B494D7D9-C06B-BC15-A2FB-D42B7EBF1FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B494D7D9-C06B-BC15-A2FB-D42B7EBF1FF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

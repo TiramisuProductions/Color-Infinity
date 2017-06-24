@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Color_Splash.Plugins", "Color_Splash.Plugins.csproj", "{E3112D6D-4081-88FF-A523-FA6A848DA789}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Color_Splash", "Color_Splash.csproj", "{CA988F89-0F89-87D1-F2FD-A86075CF68E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Color_Splash.Editor", "Color_Splash.Editor.csproj", "{6DD5D039-5AF8-6429-F2E0-EF2B05BA14F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3112D6D-4081-88FF-A523-FA6A848DA789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3112D6D-4081-88FF-A523-FA6A848DA789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3112D6D-4081-88FF-A523-FA6A848DA789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3112D6D-4081-88FF-A523-FA6A848DA789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA988F89-0F89-87D1-F2FD-A86075CF68E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA988F89-0F89-87D1-F2FD-A86075CF68E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA988F89-0F89-87D1-F2FD-A86075CF68E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA988F89-0F89-87D1-F2FD-A86075CF68E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DD5D039-5AF8-6429-F2E0-EF2B05BA14F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DD5D039-5AF8-6429-F2E0-EF2B05BA14F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DD5D039-5AF8-6429-F2E0-EF2B05BA14F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DD5D039-5AF8-6429-F2E0-EF2B05BA14F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
