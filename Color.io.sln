@@ -1,11 +1,11 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{A9F0797E-07C8-E075-DCC2-361B55FE3976}") = "Color.io", "Assembly-CSharp-firstpass.csproj", "{325F5226-62C0-4868-82CD-9F463CF7B306}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Color.io", "Assembly-CSharp-firstpass.csproj", "{325F5226-62C0-4868-82CD-9F463CF7B306}"
 EndProject
-Project("{A9F0797E-07C8-E075-DCC2-361B55FE3976}") = "Color.io", "Assembly-CSharp.csproj", "{554826E4-0CCE-8B4C-A909-0C4C4194FBBA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Color.io", "Assembly-CSharp.csproj", "{554826E4-0CCE-8B4C-A909-0C4C4194FBBA}"
 EndProject
-Project("{A9F0797E-07C8-E075-DCC2-361B55FE3976}") = "Color.io", "Assembly-CSharp-Editor.csproj", "{236A7E2A-D04C-5245-F1BF-DC802C3E6DDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Color.io", "Assembly-CSharp-Editor.csproj", "{236A7E2A-D04C-5245-F1BF-DC802C3E6DDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
