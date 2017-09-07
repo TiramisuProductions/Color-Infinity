@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c7361442936232546b71f2bbba959239
+timeCreated: 1487577534
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Variane Script
+  fontNames:
+  - Variane Script
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
