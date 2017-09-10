@@ -23,6 +23,7 @@ public class StartGame : MonoBehaviour {
 
 		GameObject game = GameObject.FindGameObjectWithTag ("gamecontroller");
 		game.GetComponent<GameController2> ().levelcounter = 1;
+		StaticShare.isgamestarted = true;
 
 	}
 	}

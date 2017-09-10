@@ -18,7 +18,7 @@ public class Touch2 : MonoBehaviour {
 		GameControllerObject = GameObject.FindGameObjectWithTag("gamecontroller");
 		// DestroyAudio1 = GameObject.FindGameObjectWithTag("DestroyAudio1");
 		//DestroyAudio2 = GameObject.FindGameObjectWithTag("DestroyAudio2");
-		gameObject.GetComponent<MeshRenderer>().material.SetColor("_Color",StaticShare.objectcolor);
+	
 
 	}
 
@@ -29,85 +29,46 @@ public class Touch2 : MonoBehaviour {
 
 //		Debug.Log("foo",gameObject);
 
-		if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) )
-		{
-			if(clicked == false)
-			{
-				clicked = true;
+		if (Input.GetMouseButtonDown (0) || (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Began)) {
+			if (StaticShare.isgamestarted == true) {
 
-			Debug.Log ("shammu");
+				if (clicked == false) {
+					clicked = true;
+
+					Debug.Log ("shammu");
 
 
 
-			Ray ray;
-			{
-				//Debug.Log("Touch detected.");
+					Ray ray;
+					{
+						//Debug.Log("Touch detected.");
 
-				RaycastHit hit;
-				//Ray ray = Camera.main.ScreenPointToRay((Input.GetTouch(0).position));
-				if (Input.GetMouseButtonDown(0))
-				{ ray = Camera.main.ScreenPointToRay((Input.mousePosition)); }
-				else
-				{
-					ray = Camera.main.ScreenPointToRay((Input.GetTouch(0).position));
-				}
-				if (Physics.Raycast(ray, out hit))
-				{
-					//	Debug.Log("Raycast hit " + hit.collider.name);
-					//	Debug.Log("Raycast tag " + hit.collider.gameObject.tag);
-					if (hit.collider.gameObject.tag != "border") {
-						Debug.Log ("fuck" + hit.collider.gameObject.tag);
+						RaycastHit hit;
+						//Ray ray = Camera.main.ScreenPointToRay((Input.GetTouch(0).position));
+						if (Input.GetMouseButtonDown (0)) {
+							ray = Camera.main.ScreenPointToRay ((Input.mousePosition));
+						} else {
+							ray = Camera.main.ScreenPointToRay ((Input.GetTouch (0).position));
+						}
+						if (Physics.Raycast (ray, out hit)) {
+							//	Debug.Log("Raycast hit " + hit.collider.name);
+							//	Debug.Log("Raycast tag " + hit.collider.gameObject.tag);
+							if (hit.collider.gameObject.tag != "border") {
 
-							if (StaticShare.inverse == false) {
-					
-								if (hit.transform.gameObject.GetComponent<MeshRenderer> ().material.color == StaticShare.currentbordercolor) {
-									GameControllerObject.GetComponent<GameController2> ().score++;
-									Debug.Log ("SCORED" + GameControllerObject.GetComponent<GameController2> ().score);
+								if (hit.collider.gameObject != null) {
+									Debug.Log ("fuck" + hit.collider.gameObject.GetComponent<ColorByOffset>().objectcolor);
+									Debug.Log ("Shit" + StaticShare.currentbordercolor);
 
-									GameControllerObject.GetComponent<GameController2> ().scoreText.text = "" + GameControllerObject.GetComponent<GameController2> ().score;
-									// scoreText.text = "";
-									StartCoroutine (ExecuteAfterTime (3));
-								} else {
-									
-									StaticShare.gameend = true;
 
+							
+									Destroy (explosion, 1);
 								}
-							} else {
-
-								if (hit.transform.gameObject.GetComponent<MeshRenderer> ().material.color != StaticShare.currentbordercolor) {
-									GameControllerObject.GetComponent<GameController2> ().score++;
-									Debug.Log ("SCORED" + GameControllerObject.GetComponent<GameController2> ().score);
-
-									GameControllerObject.GetComponent<GameController2> ().scoreText.text = "" + GameControllerObject.GetComponent<GameController2> ().score;
-									// scoreText.text = "";
-									StartCoroutine (ExecuteAfterTime (3));
-								} else {
-									
-									StaticShare.gameend = true;
-
-								}
-
-
 							}
-							Vector3 t = hit.collider.transform.position;
-							explosion = (GameObject)Instantiate (explosion, t, Quaternion.identity); 
-							if (hit.transform.gameObject != null) {
-								
-								Destroy (hit.transform.gameObject);
-							}
-						
-
-						//Debug.Log("Color");
-						//  Debug.Log("The tag matches.");
-						//Destroy(hit.collider.gameObject);
-						//Debug.Log ("fucking" + hit.collider.gameObject.tag);
-						                
-						Destroy (explosion, 1);
+						}
 					}
 				}
 			}
 		}
-	}
 }
 
 

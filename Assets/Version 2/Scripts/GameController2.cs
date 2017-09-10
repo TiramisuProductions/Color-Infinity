@@ -29,6 +29,7 @@ public class GameController2 : MonoBehaviour {
 		StartCoroutine (SpawnWaves ());
 		levelcounter = 1;
 		level1intervalsamecolor = 2;
+
 		counter = 0;
 		score = 0;
 		borderobject = GameObject.FindGameObjectWithTag ("border");
@@ -62,60 +63,24 @@ public class GameController2 : MonoBehaviour {
 		}
 	}
 
-	GameObject hazardchooselevel1(bool bordercolor)
+
+	string colorchooselevel1()
 	{
 		int i = Random.Range (0, 2);
 
-		if (bordercolor) {
-			StaticShare.objectcolor = StaticShare.currentbordercolor;
-			//level1hazard1.GetComponent<MeshRenderer> ().material.SetColor ("_Color", Color.yellow);
-			return level1hazard1;
-		} else if (i == 0) {
-			StaticShare.objectcolor = level1color ();
-			return level1hazard3;
-		} else {
-			StaticShare.objectcolor = level1color ();
-			return level1hazard1;
-		}
-		
-	}
+		switch (i) {
 
-	GameObject hazardchooselevel2(bool bordercolor)
-	{
-		if (bordercolor) {
-			StaticShare.objectcolor = StaticShare.currentbordercolor;
-			//level1hazard1.GetComponent<MeshRenderer> ().material.SetColor ("_Color", Color.yellow);
-			return level1hazard2;
-		} else {
-			StaticShare.objectcolor = level1color();
-			return level1hazard4;
+		case 0:
+			return "red";
+		case 1: 
+			return "purple";
+		default:
+			return "red";
 		}
+
 	}
 
 
-	GameObject hazardchooselevel3(bool bordercolor)
-	{
-		if (bordercolor) {
-			StaticShare.objectcolor = StaticShare.currentbordercolor;
-			//level1hazard1.GetComponent<MeshRenderer> ().material.SetColor ("_Color", Color.yellow);
-			return level1hazard2;
-		} else {
-			StaticShare.objectcolor = level1color();
-			return level1hazard1;
-		}
-	}
-
-	GameObject hazardchooselevel4(bool bordercolor)
-	{
-		if (bordercolor) {
-			StaticShare.objectcolor = StaticShare.currentbordercolor;
-			//level1hazard1.GetComponent<MeshRenderer> ().material.SetColor ("_Color", Color.yellow);
-			return level1hazard3;
-		} else {
-			StaticShare.objectcolor = level1color();
-			return level1hazard1;
-		}
-	}
 
 
 
@@ -129,23 +94,7 @@ public class GameController2 : MonoBehaviour {
 	}
 
 
-	Color  level1color()
-	{
-		int c = Random.Range (0, 3);
 
-		switch (c) {
-
-		case 0:
-			return Color.red;
-
-		case 1:
-			return Color.yellow;
-
-		default:
-			return Color.blue;
-			
-		}
-	}
 
 	public IEnumerator SpawnWaves()
 	{
@@ -188,29 +137,21 @@ public class GameController2 : MonoBehaviour {
 		switch (level) {
 
 		case 1:
-			Vector3 spawnPosition2 = new Vector3 (-90, 0, -180);
-			Quaternion spawnRotation2 = Quaternion.Euler (-90, 0, 180);
-			Instantiate (hazardchooselevel1 (border), spawnPosition2, spawnRotation2);
-			StaticShare.inverse = false;
+			if (border) {
+				StaticShare.objectcolor = StaticShare.currentbordercolor;
+			} else {
+				StaticShare.objectcolor = colorchooselevel1();
+			}
+		
+			Instantiate(level1hazard1, spawnPosition, spawnRotation);
+			
+			
 			break;
-		case 2:
-			Vector3 spawnPosition4 = new Vector3 (-90, 0, -180);
-			Quaternion spawnRotation4 = Quaternion.Euler (-90, 0, 180);
-			Instantiate (hazardchooselevel2 (border), spawnPosition4, spawnRotation4);
-			StaticShare.inverse = false;
-			break;
-		case 3:
-			Vector3 spawnPosition5 = new Vector3 (-90, 0, -180);
-			Quaternion spawnRotation5 = Quaternion.Euler (-90, 0, 180);
-			Instantiate (hazardchooselevel3 (border), spawnPosition5, spawnRotation5);
-			StaticShare.inverse = false;
-			break;
-		case 4:
-			Vector3 spawnPosition3 = new Vector3 (-90, 0, -180);
-			Quaternion spawnRotation3 = Quaternion.Euler (-90, 0, 180);
-			Instantiate (hazardchooselevel4 (border), spawnPosition3, spawnRotation3);
-			StaticShare.inverse = true;
-			break;
+
+		}
+			
+
+
 		
 
 			
@@ -225,4 +166,4 @@ public class GameController2 : MonoBehaviour {
 
 
 
-}
+

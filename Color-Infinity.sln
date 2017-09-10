@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Color-Infinity", "Assembly-CSharp-firstpass.csproj", "{C7CAEF39-E503-77BA-FD71-4A47AE49FB14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Color-Infinity", "Assembly-CSharp.csproj", "{1335CE6E-C6F0-F18D-F315-C5324F0EE977}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Color-Infinity", "Assembly-CSharp-Editor.csproj", "{5E715D02-F8A0-B7C4-C58A-A004EDC6B1BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7CAEF39-E503-77BA-FD71-4A47AE49FB14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7CAEF39-E503-77BA-FD71-4A47AE49FB14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7CAEF39-E503-77BA-FD71-4A47AE49FB14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7CAEF39-E503-77BA-FD71-4A47AE49FB14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1335CE6E-C6F0-F18D-F315-C5324F0EE977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1335CE6E-C6F0-F18D-F315-C5324F0EE977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1335CE6E-C6F0-F18D-F315-C5324F0EE977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1335CE6E-C6F0-F18D-F315-C5324F0EE977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E715D02-F8A0-B7C4-C58A-A004EDC6B1BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E715D02-F8A0-B7C4-C58A-A004EDC6B1BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E715D02-F8A0-B7C4-C58A-A004EDC6B1BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E715D02-F8A0-B7C4-C58A-A004EDC6B1BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

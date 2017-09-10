@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class BorderColorManager : MonoBehaviour {
 
-	public Color Brown = new Color(0.2F, 0.3F, 0.4F, 0.5F);
-	public Color Yellow = new Color(0.2F, 0.3F, 0.4F, 0.5F);
-	public Color Red = new Color(0.2F, 0.3F, 0.4F, 0.5F);
-	public Color Orange = new Color(0.2F, 0.3F, 0.4F, 0.5F);
-	public Color Pink = new Color (0.2F, 0.3F, 0.4F, 0.5F);
-	public Color Purple = new Color(0.2F, 0.3F, 0.4F, 0.5F);
-	public Color White = new Color(0.2F, 0.3F, 0.4F, 0.5F);
-	public Color Green = new Color(0.2F, 0.3F, 0.4F, 0.5F);
+	public Vector2 purple = new Vector2 (0.73f, -0.97f);
+	public Vector2 red = new Vector2 (0.73f, -0.04f);
 	public GameObject gamecontrollerobject;
-	public Color tempcolor;
+	public string tempcolor;
 	public int counter;
 
 	// Use this for initialization
 	void Start () {
 		gamecontrollerobject = GameObject.FindGameObjectWithTag ("gamecontroller");
-		StaticShare.currentbordercolor = colorchooselevel1 ();
+
 	
 		counter = 0;
-		gameObject.GetComponent<MeshRenderer>().material.SetColor("_Color",StaticShare.currentbordercolor);
+		gameObject.GetComponent<Renderer> ().material.mainTextureOffset = colorchooselevel1 ();
+		StaticShare.currentbordercolor = tempcolor;
 
 		
 	}
@@ -37,17 +32,12 @@ public class BorderColorManager : MonoBehaviour {
 	public void colorchange()
 	{
 		StartCoroutine (Wait (0.5f));
-		do {
-			tempcolor = colorchooselevel1 ();
-		} while (tempcolor == StaticShare.currentbordercolor);
-			
-		
 
-		
-		StaticShare.currentbordercolor = tempcolor;
+
+
 
 		counter = 0;
-		gameObject.GetComponent<MeshRenderer>().material.SetColor("_Color",StaticShare.currentbordercolor);
+		gameObject.GetComponent<Renderer> ().material.mainTextureOffset = colorchooselevel1 ();
 	}
 
 
@@ -58,7 +48,7 @@ public class BorderColorManager : MonoBehaviour {
 	}
 
 
-	Color colorchooselevel1()
+	Vector2 colorchooselevel1()
 	{
 
 		int j  = Random.Range (0, 3);
@@ -66,19 +56,23 @@ public class BorderColorManager : MonoBehaviour {
 		switch (j) {
 
 		case 0:
-			return Green;
+			
+			tempcolor = "purple";
+			return purple;
 			break;
 		case 1:
-			return Brown;
+			tempcolor = "red";
+			return red;
+
 			break;
 		case 2:
-			return Yellow;
+			return purple;
 			break;
 		case 3:
-			return Red;
+			return purple;
 			break;
 		default:
-			return Brown;
+			return purple;
 		}
 
 	}
